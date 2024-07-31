@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="title" content="Challah Recipe Generator">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Challah Recipe Generator</title>
+	</head>
+	<body>
+        <h1 id="header">Challah Recipe Generator</h1>
+
+        <table id="recipe">
+            <thead>
+                <tr style="background-color: lightsteelblue">
+                    <th colspan="3">
+                        Original (<span id="amount">5</span>)
+                    </th>
+                </tr>
+            </thead>
+            <tr>
+                <th colspan="3">
+                    Proofing
+                </th>
+            </tr>
+            <tbody id="proofing">
+            </tbody>
+            <tr>
+                <th colspan="3">
+                    Dough
+                </th>
+            </tr>
+            <tbody id="dough">
+            </tbody>
+        </table>
+
+        <div id="options" style="line-height: 200%;">
+            <select id="selector" autocomplete="off">
+                <option value="1">Proton (5)</option>
+                <option value="2">Atom (10)</option>
+                <option value="3">Little Baby (15)</option>
+                <option value="4">Baby (20)</option>
+                <option value="5">Super Baby (25)</option>
+                <option value="6">Special Boy (30)</option>
+                <option value="7">Big Boy (35)</option>
+                <option value="8">Giant (40)</option>
+            </select>
+
+            <input type="checkbox" id="honey" autocomplete="off">
+            <label for="honey">Substitute honey for sugar</label>
+
+            <input type="checkbox" id="banana" autocomplete="off">
+            <label for="banana">Substitute banana for egg</label>
+
+            <input type="checkbox" id="saltfree" autocomplete="off">
+            <label for="saltfree">No salt</label>
+
+            <br />
+
+            <button id="copy">Copy to clipboard</button>
+        </div>
+        <p id="message"></p>
+
+        <script src="updateIngredients.js"></script>
+        <script>
+            updateIngredients();
+        </script>
+	</body>
+</html>
